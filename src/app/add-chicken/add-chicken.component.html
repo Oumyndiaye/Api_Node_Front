@@ -1,0 +1,22 @@
+<!-- chicken-form.component.html -->
+
+<form [formGroup]="ChickenForm" (ngSubmit)="onSubmit()">
+  <h2>Ajout Chicken</h2>
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" formControlName="birthday">
+  </div>
+
+  <div>
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" formControlName="weight">
+  </div>
+
+  <button type="submit" [disabled]="!ChickenForm.valid">Add Chicken</button>
+</form>

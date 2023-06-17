@@ -1,0 +1,36 @@
+section.section {
+  padding: 20px;
+}
+
+div.title-wrapper {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+div.title {
+  flex-grow: 1;
+}
+
+h2.title-text {
+  font-size: 18px;
+  margin: 0;
+}
+
+a.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  color: #28a745;
+  text-decoration: none;
+  text-transform: capitalize;
+  
+ 
+transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}

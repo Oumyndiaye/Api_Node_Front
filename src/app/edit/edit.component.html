@@ -1,0 +1,23 @@
+<h2>Edit Chicken</h2>
+<div class="text-end" style="margin-bottom: 15px;" (click)="back()">
+    <a class="btn btn btn-primary">
+        <<< Retour à la liste
+    </a>
+</div>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="d-flex align-items-center justify-content-between">
+  <div>
+        <label for="name">Name:</label>
+        <input type="text"  id="name" formControlName="name"  [value]="chicken.name">
+  </div>
+  <div>
+    <label for="birthday">Birthday:</label>
+    <input type="text" id="birthday"  formControlName="birthday"  [value]="chicken.birthday">
+  </div>
+  <div class="mb-4" style="margin-bottom: 5px;">
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" formControlName="weight" [value]="chicken.weight" >
+  </div>
+
+  <button type="submit">Save Changes</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</form>

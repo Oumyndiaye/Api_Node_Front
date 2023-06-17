@@ -1,0 +1,66 @@
+<h2>Details Chicken</h2>
+<div class="text-end" (click)="back()">
+    <a class="btn btn btn-primary">
+        <<< Retour à la liste
+    </a>
+</div>
+<main class = "main">
+    <div class="d-flex align-items-center justify-content-between p-2">
+        <div>
+            <h4 class="fs-5"></h4>
+        </div>
+        
+        
+    </div>
+    <section class="section">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="card card_main">
+                    <div class="row fs-4">
+                        <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
+                            <div class="mb-3">
+                                <div class="row g-0">
+                                    <div class="col-12 mt-2">
+                                        <div class="card-header py-1 d-flex justify-content-between" >
+                                           <span class="text-uppercase title-text"> Détails Chicken</span>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="fiche_show shadow">
+                                                <table class="table ligne col-12" >
+                                                    <div class="col-12 mt-2">
+                                                      <div><div class="titre2"> <span class=""> Données de Base</span> </div></div>
+
+                                                    <div class="row g-1">
+                                                      <div class="col-md-4">
+                                                        <span>Name : </span>
+                                                        <span class="info">{{ chicken.name }}</span>
+                                                      </div>
+                                                      <div class="col-md-4">
+                                                        <span>Birthday : </span>
+                                                        <span class="info">{{ chicken.birthday }}</span>
+                                                      </div>
+                                                      <div class="col-md-4">
+                                                        <span>Weight : </span>
+                                                        <span class="info">{{ chicken.weight }}</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <a class="btn btn-primary" [routerLink]="['/chickens', chicken._id, 'edit']">Modifier</a>
+            <a class="btn btn-danger" (click)="deleteChicken(chicken._id)">Supprimer</a>
+            </div>
+    </section>
+   
+</main>
