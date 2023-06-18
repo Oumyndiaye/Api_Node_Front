@@ -19,9 +19,9 @@ export class ChickenService {
   getChicken(id:string ): Observable<any> {
     return this.http.get<any>(`${environment.api_url}/${id}`);
   }
-  modifyChicken(id:string ,idChicken:string): Observable<any> {
+  modifyChicken(id:string ,newChicken:any): Observable<any> {
     return this.http.put<any>(`${environment.api_url}/${id}`,{
-      "idChicken":idChicken
+      "idChicken":newChicken
     });
   }
   deleteChicken(id :number):Observable<any>{

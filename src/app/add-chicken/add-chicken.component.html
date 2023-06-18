@@ -1,5 +1,9 @@
 <!-- chicken-form.component.html -->
-
+<div class="text-end" (click)="back()">
+  <a class="btn btn btn-primary">
+      << Retour à la liste
+  </a>
+</div>
 <form [formGroup]="ChickenForm" (ngSubmit)="onSubmit()">
   <h2>Ajout Chicken</h2>
 

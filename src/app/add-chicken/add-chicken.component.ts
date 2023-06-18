@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ChickenService } from '../service/chicken.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-chicken',
@@ -16,7 +17,7 @@ export class AddChickenComponent implements OnInit {
   ChickenForm !: FormGroup | any;
 
 
-  constructor(private chickenService:ChickenService,private formBuilder: FormBuilder,private router:Router) {}
+  constructor(private chickenService:ChickenService,private formBuilder: FormBuilder,private router:Router,private location:Location) {}
 
   ngOnInit() {
     this.ChickenForm = this.formBuilder.group({
@@ -40,6 +41,9 @@ export class AddChickenComponent implements OnInit {
     }
   }
   
+  back(): void {
+    this.location.back();
+  }
 
 
 }

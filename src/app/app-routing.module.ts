@@ -8,7 +8,7 @@ import { EditComponent } from './edit/edit.component';
 const routes: Routes = [
     // { path: '', component:  },
      { path: '', component: ListChickenComponent },
-     { path: 'chickens', component: AddChickenComponent },
+     { path: 'addchickens', component: AddChickenComponent },
      { path: 'chickens/:id/detail', component: DetailsChickenComponent  },
      { path: 'chickens/:id/edit', component: EditComponent  },
     // Ajoutez d'autres routes selon vos besoins

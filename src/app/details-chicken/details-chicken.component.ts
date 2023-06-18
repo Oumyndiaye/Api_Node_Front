@@ -11,16 +11,13 @@ import { Chicken } from '../models/chicken';
 })
 export class DetailsChickenComponent implements OnInit {
   identifiant !: string;
-  chicken :   any;
+  chicken : Chicken []  | any;
   constructor(private location:Location,private route : ActivatedRoute,private chickenService:ChickenService,  private router: Router) { }
 
   ngOnInit(): void {
-    this.identifiant = this.route.snapshot.params['id'];
-    console.log( this.identifiant );
-    
+    this.identifiant = this.route.snapshot.params['id'];    
     this.chickenService.getChicken(this.identifiant).subscribe(data=>{
     this.chicken = data;     
-    console.log(this.chicken);
      
     });
   }
